@@ -465,12 +465,10 @@ for(let e = 0; e < live.length; e = e + 4) {
             natarius[i].style.display = 'flex'
             continue
         }
-        let selects = [search.value, city.value, tuman.value, idora.value]
-        let userlife = [UserName[i].textContent, ucerCity[i].textContent, ucerTuman[i].textContent, ucerOffice[i].textContent]
-        console.log(UserName[i].textContent);
+        let selects = [search.value.toUpperCase(), city.value, tuman.value, idora.value]
+        let userlife = [UserName[i].textContent.toLocaleUpperCase(), ucerCity[i].textContent, ucerTuman[i].textContent, ucerOffice[i].textContent]
         for (let a = 0; a < selects.length; a++) {
             if(userlife[0].includes(selects[0]) && lives[i].includes(selects[1]) && lives[i].includes(selects[2]) && lives[i].includes(selects[3])) {
-                console.log(lives[i]);
                 continue
             }
             natarius[i].style.display = 'none'
@@ -480,24 +478,40 @@ for(let e = 0; e < live.length; e = e + 4) {
 let tumanlar = []
 let shaharlar = [];
 let office = []
+console.log(shaharlar)
 
-function select(place, placeName, options) {
-    for(let i = 0; i < natarius.length; i ++) {
-    place.push(document.createElement('option'))
-    place[i].text = placeName[i].textContent
-    options.appendChild(place[i])
-    for(let a = 0; a < i; a++) {
-        if(place[i].textContent.toUpperCase() != place[a].textContent.toUpperCase()) {
+for(let i = 0; i < natarius.length; i ++) {
+    shaharlar.push(document.createElement('option'))
+    shaharlar[i].innerHTML = ucerCity[i].textContent
+    city.appendChild(shaharlar[i])
+    console.log(shaharlar[i]);
+    for(let a = 0; a <= natarius.length; a++) {
+        if(shaharlar[i].textContent.toUpperCase() != shaharlar[a].textContent.toUpperCase()) {
             continue
         }
-        place[a].style.display = 'none'
+        shaharlar.splice(i-1, 1)
     }
 }
-}
 
-select(shaharlar, ucerCity, city);
-select(tumanlar, ucerTuman, tuman);
-select(office, ucerOffice, idora);
+for(let i = 0; i < natarius.length; i ++) {
+    let selects = [city.value, tuman.value, idora.value]
+    let userlife = [ucerCity[i].textContent, ucerTuman[i].textContent, ucerOffice[i].textContent]
+    if(shaharlar[i].value == city.value) {
+        console.log('shahar');
+        tumanlar[i].style.display = 'inline-block'
+        if(lives[i].includes(shaharlar[i])) {
+            console.log('bor');
+            tumanlar[i].style.display = 'inline-block'
+        }
+    }
+    tumanlar[i].style.display = 'none'
+    office[i].style.display = 'none'
+    tumanlar[i].style.display = 'none'
+    for(let f = 0; f < natarius.length; f++) {
+        console.log(lives[i].includes(selects[0]));
+        
+    }
+}
 // submit.onclick = () => {
 //     let searchValue = search.value
 //     alert(search.value)
