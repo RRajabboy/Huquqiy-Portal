@@ -2578,6 +2578,13 @@ body {
   color: var(--clr);
   font-size: calc(0.7vw + 7px);
 }
+.natariuslar .container .banners .container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.natariuslar .container .banners .container .flex .box.none {
+  display: none;
+}
 .natariuslar .container .banners .container .flex .box {
   width: 24%;
   display: flex;
@@ -2588,11 +2595,20 @@ body {
   font-weight: 600;
   font-size: calc(0.7vw + 7px);
 }
+.natariuslar .container .banners .container .flex .box .top .img {
+  width: 100%;
+}
+.natariuslar .container .banners .container .flex .box .top .img img {
+  width: 100%;
+}
 .natariuslar .container .banners .container .flex .box .top > span {
   line-height: 1.2;
   opacity: 0.8;
   font-size: calc(0.6vw + 6px);
   padding: 0.8vw 0;
+}
+.natariuslar .container .banners .container .flex .box .top .texnikum {
+  font-weight: 600;
 }
 .natariuslar .container .banners .container .flex .box .time {
   height: auto;
