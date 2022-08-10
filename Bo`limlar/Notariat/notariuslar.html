@@ -522,6 +522,26 @@ child(city, shaharlar, arrCity)
 child(tuman, tumanlar, arrTuman)
 child(idora, office, arrOffice)
 
+for(let i = 0; i < shaharlar.length; i++) {
+    if(city.value == arrCity[i]) {
+        console.log(i);
+        for(let a = 0; a < i; i++) {
+            if(!lives[i].includes(arrCity[i].textContent) && !lives[i].includes(arrTuman[i].textContent)) {
+                arrTuman[i].style.display = 'none'
+                console.log('ishladi');
+            }
+        }
+    }
+}
+
+submit.onclick = () => {
+    for(let i = 0; i < shaharlar.length; i++) {
+    console.log(city.value);
+    console.log(arrCity[i].textContent);
+    console.log(city.value == arrCity[i]);
+}
+}
+
 
 let arrNum = [];
 let tartib = 0
