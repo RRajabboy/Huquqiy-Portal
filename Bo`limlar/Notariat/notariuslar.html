@@ -475,50 +475,52 @@ for(let e = 0; e < live.length; e = e + 4) {
         }
     }
 }
-let tumanlar = []
+
+let allCity = []
+let allTuman = []
+let allOffice = []
+for(let i = 0; i < natarius.length; i++) {
+    allCity.push(ucerCity[i])
+    allTuman.push(ucerTuman[i])
+    allOffice.push(ucerOffice[i])
+}
 let shaharlar = [];
+let tumanlar = []
 let office = []
-console.log(shaharlar)
 
-for(let i = 0; i < natarius.length; i ++) {
-    shaharlar.push(document.createElement('option'))
-    shaharlar[i].innerHTML = ucerCity[i].textContent
-    city.appendChild(shaharlar[i])
-    console.log(shaharlar[i]);
-    for(let a = 0; a <= natarius.length; a++) {
-        if(shaharlar[i].textContent.toUpperCase() != shaharlar[a].textContent.toUpperCase()) {
-            continue
+function filtrPlace(place, array){
+    for(let i = 0; i < natarius.length; i++) {
+        for(let a = 0; a < i; a++) {
+            if(place[i].textContent == place[a].textContent) {
+                place[i] = 0
+            }
         }
-        shaharlar.splice(i-1, 1)
+        if(place[i] != 0) {
+            array.push(place[i])
+        }
+    }
+}
+filtrPlace(allCity, shaharlar)
+filtrPlace(allTuman, tumanlar)
+filtrPlace(allOffice, office)
+console.log(shaharlar[0].textContent)
+
+let arrCity = []
+let arrTuman = []
+let arrOffice = []
+
+function child(childPlace, Place, array) {
+    for (let i = 0; i < Place.length; i++) {
+        array.push(document.createElement('option'))
+        array[i].textContent = Place[i].textContent
+        childPlace.appendChild(array[i])
+
     }
 }
 
-for(let i = 0; i < natarius.length; i ++) {
-    let selects = [city.value, tuman.value, idora.value]
-    let userlife = [ucerCity[i].textContent, ucerTuman[i].textContent, ucerOffice[i].textContent]
-    if(shaharlar[i].value == city.value) {
-        console.log('shahar');
-        tumanlar[i].style.display = 'inline-block'
-        if(lives[i].includes(shaharlar[i])) {
-            console.log('bor');
-            tumanlar[i].style.display = 'inline-block'
-        }
-    }
-    tumanlar[i].style.display = 'none'
-    office[i].style.display = 'none'
-    tumanlar[i].style.display = 'none'
-    for(let f = 0; f < natarius.length; f++) {
-        console.log(lives[i].includes(selects[0]));
-        
-    }
-}
-// submit.onclick = () => {
-//     let searchValue = search.value
-//     alert(search.value)
-//     for(let i = 0; i < natarius.length; i ++) {
-        
-//     }
-// }
+child(city, shaharlar, arrCity)
+child(tuman, tumanlar, arrTuman)
+child(idora, office, arrOffice)
 
 
 let arrNum = [];
