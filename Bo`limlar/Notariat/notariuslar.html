@@ -392,11 +392,11 @@
                                 <a href="#"><i class="fa-solid fa-arrow-right next"></i></a>
                             </div>
                         </div>
-                        <div class="box">
+                        <div class="box" style="background: red;">
                             <div class="top">
                                 <div class="img"><img src="./img/img-1.svg" alt=""></div>
                                 <p class="UserName">Bondareva Irina Alekseyevna</p>
-                                <span class="live"><span class="shahar">Xorazm viloyati</span>  <span class="tuman">Xiva tuman</span> <span class="work">xususiy amaliyot bilan shug‘ullanuvchi notarius</span></span>
+                                <span class="live"><span class="shahar">Xorazmlik viloyati</span>  <span class="tuman">Xiva tuman</span> <span class="work">xususiy amaliyot bilan shug‘ullanuvchi notarius</span></span>
                             </div>
                             <div class="time">
                                 <div class="stars">
@@ -907,6 +907,7 @@ for(let i = 0; i < shaharlar.length; i++) {
     }
 }
 
+let conatiner = document.getElementById('ctr')
 
 let natar = []
 let blok = 0
@@ -916,23 +917,26 @@ for(let i = 0; i <= natarius.length; i++){
         natar.push(document.createElement('div'))
         natar[trn].classList.add('flex')
         console.log('bajarildi')
-        for (let b = 0; b < i; b++) {
+        for (let b = 0; b < 16; b++) {
             natar[trn].appendChild(natarius[b])
         }
-        document.getElementById('ctr').appendChild(natar[trn])
+        conatiner.appendChild(natar[trn])
         blok = blok + 16;
         trn++
         console.log(natar);
     }
 }
-console.log(natar);
+conatiner.removeChild(conatiner.children[0])
+conatiner.removeChild(conatiner.children[1])
+
 let arrNum = [];
 let tartib = 0
+let nth;
 for(let i = 0; i < natar.length; i++) {
 	arrNum.push(document.createElement('span'))
 	arrNum[i].innerHTML = i + 1
 	document.getElementById('nav-raqam').appendChild(arrNum[i]);
-    natar[0].classList.add('none')
+    natar[i].classList.add('none')
 	arrNum[0].classList.add('son')
 	arrNum[i].onclick = () => {
 		nth = i
@@ -973,6 +977,9 @@ for(let i = 0; i < natar.length; i++) {
 		}
 	}
 }
+natar[0].classList.add('none')
+natar[1].classList.add('none')
+natar[2].classList.add('none')
 
     </script>
 	<script src="../../script.js"></script>
