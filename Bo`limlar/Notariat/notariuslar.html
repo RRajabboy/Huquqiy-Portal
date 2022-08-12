@@ -911,24 +911,19 @@ let conatiner = document.getElementById('ctr')
 
 let natar = []
 let blok = 0
-let blokEnd = 16
 let trn = 0
-for(let i = 0; i < natarius.length; i++){
-    if(i == blokEnd){
+for(let i = 0; i <= natarius.length; i++){
+    if(i == blok){
         natar.push(document.createElement('div'))
         natar[trn].classList.add('flex')
         console.log('bajarildi')
-        for (let b = blok; b < blokEnd; b++) {
-            console.log(b);
+        for (let b = 0; b < 16; b++) {
             natar[trn].appendChild(natarius[b])
-            
         }
         conatiner.appendChild(natar[trn])
-        console.log(natar[trn].children);
-
         blok = blok + 16;
-        blokEnd = blokEnd + 16;
         trn++
+        console.log(natar);
     }
 }
 conatiner.removeChild(conatiner.children[0])
@@ -936,7 +931,7 @@ conatiner.removeChild(conatiner.children[1])
 
 let arrNum = [];
 let tartib = 0
-let nth;
+let chi;
 for(let i = 0; i < natar.length; i++) {
 	arrNum.push(document.createElement('span'))
 	arrNum[i].innerHTML = i + 1
@@ -944,11 +939,9 @@ for(let i = 0; i < natar.length; i++) {
     natar[0].classList.add('none')
 	arrNum[0].classList.add('son')
 	arrNum[i].onclick = () => {
-		nth = i
+		chi = i
 		arrNum[i].classList.add('son')
 		natar[i].classList.add('none')
-        console.log(i);
-        console.log(natar[i]);
 		for(let b = 0; b < natar.length; b++){
 			if(b == i) {
 				continue
@@ -958,12 +951,12 @@ for(let i = 0; i < natar.length; i++) {
 		}
 	}
 	leftBtn.onclick = () => {
-		nth--
-		if(nth < 0) nth = natar.length -1
-		arrNum[nth].classList.add('son')
-		natar[nth].classList.add('none')
+		chi--
+		if(chi < 0) chi = natar.length -1
+		arrNum[chi].classList.add('son')
+		natar[chi].classList.add('none')
 		for(let b = 0; b < natar.length; b++){
-			if(b == nth) {
+			if(b == chi) {
 				continue
 			}
 			arrNum[b].classList.remove('son')
@@ -971,12 +964,12 @@ for(let i = 0; i < natar.length; i++) {
 		}
 	}
 	rightBtn.onclick = () => {
-		nth++
-		if(nth >= natar.length) nth = 0
-		arrNum[nth].classList.add('son')
-		natar[nth].classList.add('none')
+		chi++
+		if(chi >= natar.length) chi = 0
+		arrNum[chi].classList.add('son')
+		natar[chi].classList.add('none')
 		for(let b = 0; b < natar.length; b++){
-			if(b == nth) {
+			if(b == chi) {
 				continue
 			}
 			arrNum[b].classList.remove('son')
