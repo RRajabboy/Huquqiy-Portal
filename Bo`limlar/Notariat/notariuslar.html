@@ -392,7 +392,7 @@
                                 <a href="#"><i class="fa-solid fa-arrow-right next"></i></a>
                             </div>
                         </div>
-                        <div class="box" style="background: red;">
+                        <div class="box">
                             <div class="top">
                                 <div class="img"><img src="./img/img-1.svg" alt=""></div>
                                 <p class="UserName">Bondareva Irina Alekseyevna</p>
@@ -911,19 +911,24 @@ let conatiner = document.getElementById('ctr')
 
 let natar = []
 let blok = 0
+let blokEnd = 16
 let trn = 0
-for(let i = 0; i <= natarius.length; i++){
-    if(i == blok){
+for(let i = 0; i < natarius.length; i++){
+    if(i == blokEnd){
         natar.push(document.createElement('div'))
         natar[trn].classList.add('flex')
         console.log('bajarildi')
-        for (let b = 0; b < 16; b++) {
+        for (let b = blok; b < blokEnd; b++) {
+            console.log(b);
             natar[trn].appendChild(natarius[b])
+            
         }
         conatiner.appendChild(natar[trn])
+        console.log(natar[trn].children);
+
         blok = blok + 16;
+        blokEnd = blokEnd + 16;
         trn++
-        console.log(natar);
     }
 }
 conatiner.removeChild(conatiner.children[0])
@@ -936,12 +941,14 @@ for(let i = 0; i < natar.length; i++) {
 	arrNum.push(document.createElement('span'))
 	arrNum[i].innerHTML = i + 1
 	document.getElementById('nav-raqam').appendChild(arrNum[i]);
-    natar[i].classList.add('none')
+    natar[0].classList.add('none')
 	arrNum[0].classList.add('son')
 	arrNum[i].onclick = () => {
 		nth = i
 		arrNum[i].classList.add('son')
 		natar[i].classList.add('none')
+        console.log(i);
+        console.log(natar[i]);
 		for(let b = 0; b < natar.length; b++){
 			if(b == i) {
 				continue
@@ -977,9 +984,6 @@ for(let i = 0; i < natar.length; i++) {
 		}
 	}
 }
-natar[0].classList.add('none')
-natar[1].classList.add('none')
-natar[2].classList.add('none')
 
     </script>
 	<script src="../../script.js"></script>
