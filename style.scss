@@ -3232,63 +3232,64 @@ body {
 		}
 		> .left {
 			width: 65%;
-			.testlar {
-				.test {
-					width: 100%;
-					> * {
-						margin-bottom: 30px;
+			.test.tests {
+				display: inline-block;
+			}
+			.test {
+				width: 100%;
+				> * {
+					margin-bottom: 30px;
+				}
+				.theme {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					h2 {
+						font-size: 25px;
 					}
-					.theme {
+					> .left {
+						opacity: .7;
 						display: flex;
-						justify-content: space-between;
 						align-items: center;
-						h2 {
-							font-size: 25px;
+						span:first-child {
+							margin-right: 20px;
 						}
-						> .left {
-							opacity: .7;
-							display: flex;
-							align-items: center;
-							span:first-child {
-								margin-right: 20px;
-							}
-							span {
-								font-size: 16px;
-								i {
-									margin-right: 5px;
-								}
+						span {
+							font-size: 16px;
+							i {
+								margin-right: 5px;
 							}
 						}
 					}
-					> img {
-						width: 100%;
-						border-radius: var(--radius);
-					}
-					.text {
-						p {
-							margin-bottom: 20px;
-							font-size: 18px;
-							span {
-								font-weight: 700;
-							}
+				}
+				> img {
+					width: 100%;
+					border-radius: var(--radius);
+				}
+				.text {
+					p {
+						margin-bottom: 20px;
+						font-size: 18px;
+						span {
+							font-weight: 700;
 						}
-						margin-bottom: 45px;
 					}
-					a {
-						font-size: 17px;
-						background: rgb(42, 172, 133);
+					margin-bottom: 45px;
+				}
+				a {
+					font-size: 17px;
+					background: rgb(42, 172, 133);
+					color: white;
+					padding: 9px 25px;
+					border-radius: 30px;
+					transition: .2s;
+					i {
 						color: white;
-						padding: 9px 25px;
-						border-radius: 30px;
-						transition: .2s;
-						i {
-							color: white;
-							margin-left: 10px;
-						}
+						margin-left: 10px;
 					}
-					a:hover {
-						background-color: rgb(39, 163, 126);
-					}
+				}
+				a:hover {
+					background-color: rgb(39, 163, 126);
 				}
 			}
 			.links {
@@ -3310,6 +3311,96 @@ body {
 					background: var(--clr);
 					border: 1px solid var(--clr);
 					color: white;
+				}
+			}
+		}
+	}
+}
+
+//////////////////////////////// Elekttron kitoblar //////////////////////////////////////////////
+
+.kitob {
+	.container {
+		.flex {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			.left {
+				width: 65%;
+				.books.none{
+					display: flex;
+				}
+				.books {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					flex-wrap: wrap;
+					align-items: flex-start;
+					display: none;
+					.book.book-none {
+						display: none;
+					}
+					.box {
+						width: 32%;
+						border-radius: 15px;
+						background: #ffffff;
+						border: 1px solid rgba(0, 0, 0, 0.1);
+						margin-bottom: 30px;
+						.img {
+							width: 100%;
+							overflow: hidden;
+							border-top-left-radius: 15px;
+							border-top-right-radius: 15px;
+							max-height: 410px;
+							img {
+								width: 100%;
+							}
+						}
+						p {
+							margin: 15px 20px;
+							font-weight: 500;
+							font-size: 20px;
+						}
+						p:nth-child(3) {
+							margin: 20px;
+							font-weight: 500;
+							font-size: 18px;
+							color: orange;
+						}
+						span {
+							display: none;
+						}
+					}
+				}
+			}
+			.right {
+				width: 33%;
+				border: 1px solid var(--borderClr);
+				background: white;
+				border-radius: var(--radius);
+				padding: 25px;
+				display: flex;
+				flex-direction: column;
+				span {
+					color: black;
+					padding: calc(.6vw + 6px);
+					border-radius: var(--radius);
+					margin-bottom: calc(.5vw + 5px);
+					font-size: calc(.5vw + 9px);
+					transition: .1s;
+					cursor: pointer;
+				}
+				span.activ {
+					color: white;
+					background: var(--clr);
+				}
+				span.noHover:hover {
+					background: var(--clr);
+					color: white;
+				}
+				span:hover {
+					background-color: var(--borderClr);
+					color: black;
 				}
 			}
 		}

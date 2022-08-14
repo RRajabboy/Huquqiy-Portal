@@ -2847,49 +2847,52 @@ body {
 .ramz .container > .left {
   width: 65%;
 }
-.ramz .container > .left .testlar .test {
+.ramz .container > .left .test.tests {
+  display: inline-block;
+}
+.ramz .container > .left .test {
   width: 100%;
 }
-.ramz .container > .left .testlar .test > * {
+.ramz .container > .left .test > * {
   margin-bottom: 30px;
 }
-.ramz .container > .left .testlar .test .theme {
+.ramz .container > .left .test .theme {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.ramz .container > .left .testlar .test .theme h2 {
+.ramz .container > .left .test .theme h2 {
   font-size: 25px;
 }
-.ramz .container > .left .testlar .test .theme > .left {
+.ramz .container > .left .test .theme > .left {
   opacity: 0.7;
   display: flex;
   align-items: center;
 }
-.ramz .container > .left .testlar .test .theme > .left span:first-child {
+.ramz .container > .left .test .theme > .left span:first-child {
   margin-right: 20px;
 }
-.ramz .container > .left .testlar .test .theme > .left span {
+.ramz .container > .left .test .theme > .left span {
   font-size: 16px;
 }
-.ramz .container > .left .testlar .test .theme > .left span i {
+.ramz .container > .left .test .theme > .left span i {
   margin-right: 5px;
 }
-.ramz .container > .left .testlar .test > img {
+.ramz .container > .left .test > img {
   width: 100%;
   border-radius: var(--radius);
 }
-.ramz .container > .left .testlar .test .text {
+.ramz .container > .left .test .text {
   margin-bottom: 45px;
 }
-.ramz .container > .left .testlar .test .text p {
+.ramz .container > .left .test .text p {
   margin-bottom: 20px;
   font-size: 18px;
 }
-.ramz .container > .left .testlar .test .text p span {
+.ramz .container > .left .test .text p span {
   font-weight: 700;
 }
-.ramz .container > .left .testlar .test a {
+.ramz .container > .left .test a {
   font-size: 17px;
   background: rgb(42, 172, 133);
   color: white;
@@ -2897,11 +2900,11 @@ body {
   border-radius: 30px;
   transition: 0.2s;
 }
-.ramz .container > .left .testlar .test a i {
+.ramz .container > .left .test a i {
   color: white;
   margin-left: 10px;
 }
-.ramz .container > .left .testlar .test a:hover {
+.ramz .container > .left .test a:hover {
   background-color: rgb(39, 163, 126);
 }
 .ramz .container > .left .links {
@@ -2924,4 +2927,88 @@ body {
   background: var(--clr);
   border: 1px solid var(--clr);
   color: white;
+}
+
+.kitob .container .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.kitob .container .flex .left {
+  width: 65%;
+}
+.kitob .container .flex .left .books.none {
+  display: flex;
+}
+.kitob .container .flex .left .books {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  display: none;
+}
+.kitob .container .flex .left .books .book.book-none {
+  display: none;
+}
+.kitob .container .flex .left .books .box {
+  width: 32%;
+  border-radius: 15px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+.kitob .container .flex .left .books .box .img {
+  width: 100%;
+  overflow: hidden;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  max-height: 410px;
+}
+.kitob .container .flex .left .books .box .img img {
+  width: 100%;
+}
+.kitob .container .flex .left .books .box p {
+  margin: 15px 20px;
+  font-weight: 500;
+  font-size: 20px;
+}
+.kitob .container .flex .left .books .box p:nth-child(3) {
+  margin: 20px;
+  font-weight: 500;
+  font-size: 18px;
+  color: orange;
+}
+.kitob .container .flex .left .books .box span {
+  display: none;
+}
+.kitob .container .flex .right {
+  width: 33%;
+  border: 1px solid var(--borderClr);
+  background: white;
+  border-radius: var(--radius);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+.kitob .container .flex .right span {
+  color: black;
+  padding: calc(0.6vw + 6px);
+  border-radius: var(--radius);
+  margin-bottom: calc(0.5vw + 5px);
+  font-size: calc(0.5vw + 9px);
+  transition: 0.1s;
+  cursor: pointer;
+}
+.kitob .container .flex .right span.activ {
+  color: white;
+  background: var(--clr);
+}
+.kitob .container .flex .right span.noHover:hover {
+  background: var(--clr);
+  color: white;
+}
+.kitob .container .flex .right span:hover {
+  background-color: var(--borderClr);
+  color: black;
 }/*# sourceMappingURL=style.css.map */

@@ -113,3 +113,22 @@ for(let y = 0; y < boxCall.length; y++) {
 		}
 	}
 }	
+
+
+//////////////////////////////////////// Onlayn sinov //////////////////////////////////////
+
+// let navRight = document.querySelectorAll('.ramz .container .right a.box')
+// let tests = document.querySelectorAll('.ramz .container .left .test')
+// let clickTest = document.querySelectorAll('.sinov .container .box .right .alar .batafsil')
+// let clickNumber;
+// for (let i = 0; i < navRight.length; i++) {
+// 	navRight[i].onclick = () => {
+// 		tests[i].classList.add('tests')
+// 		for (let a = 0; a < navRight.length; a++) {
+// 			if(i == a) {
+// 				continue
+// 			}
+// 			tests[a].classList.remove('tests')
+// 		}
+// 	}
+// }
