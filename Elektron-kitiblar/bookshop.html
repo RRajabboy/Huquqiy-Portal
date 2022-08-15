@@ -71,7 +71,7 @@
 				<div class="br"></div>
 				<a href="../Maslahat/maslahat.html" class="drop-dawn">Bepul huquqiy maslahat</a>
 				<div class="br"></div>
-				<a href="#" class="drop-dawn">Ishonch raqamlari</a>
+				<a href="../Telefon-Raqam/number.html" class="drop-dawn">Ishonch raqamlari</a>
 			</div>	
 		</div>
 	</div>
@@ -276,7 +276,6 @@ let guruh = []
 let startLimit = 11
 let limit = 11
 let nth = 0;
-console.log(book.length)
 for (let i = 0; i < book.length; i++) {
     if(limit == i) {
         guruh.push(document.createElement('div'))
@@ -293,7 +292,6 @@ for (let i = 0; i < book.length; i++) {
 if(book.length % (startLimit + 1) != 0) {
         guruh.push(document.createElement('div'))
         guruh[nth].classList.add('books')
-        console.log(startLimit, nth);
         aLength = (book.length % (startLimit + 1)) + startLimit
         for (let a = startLimit+1; a <= aLength; a++) {
             guruh[nth].appendChild(book[a])
@@ -355,36 +353,61 @@ for(let i = 0; i < guruh.length; i++) {
 		}
 	}
 }
+let asosiyTur = document.querySelectorAll('.kitob .container .flex .left .box .turi')
+let turi = []
 
-let turi = document.querySelectorAll('.kitob .container .flex .left .box .turi')
+
+for(let i= 0; i < asosiyTur.length; i++) {
+    turi.push(asosiyTur[i].textContent.toLocaleLowerCase())
+}
+
 let navTur = []
 for(let i = 0; i < turi.length; i++) {
     for(let a = 0; a < i; a++) {
-        if(turi[i].textContent.toLocaleLowerCase() == turi[a].textContent.toLocaleLowerCase()) {
-            console.log(turi[i].textContent, turi[a].textContent);
-            turi[i].textContent = 0
+        if(turi[i] == turi[a]) {
+            turi[i] = 0
             
         }
     }
-    if(turi[i].textContent != 0) {
-        navTur.push(turi[i].textContent)
+    if(turi[i] != 0) {
+        navTur.push(turi[i])
     }
 }
 
+
 navTur.sort()
 navTur.unshift('Barcha kitoblar')
-console.log(navTur);
+
 let navTur2 = []
 for (let i = 0; i < navTur.length; i++) {
     navTur2.push(document.createElement('span'))
     document.getElementById('rightNavigation').appendChild(navTur2[i])
     navTur2[i].textContent = navTur[i]
+    navTur2[0].classList.add('activ')
+    navTur2[0].classList.add('activ')
+    navTur2[0].classList.add('noHover')
+    for (let w = 0; w < book.length; w++) {
+        book[w].classList.add('book-none')
+    }
+    navTur2[0].onclick = () => {
+        for (let w = 0; w < book.length; w++) {
+            book[w].classList.add('book-none')
+            navTur2[0].classList.add('activ')
+            navTur2[0].classList.add('noHover')
+            if(w != 0 && w >= navTur2){
+                navTur2[w].classList.remove('activ')
+                navTur2[w].classList.remove ('noHover')
+            }
+        }
+    }
     navTur2[i].onclick = () => {
 		navTur2[i].classList.add('activ')
-		navTur2[i].classList.add('none')
-        for (let a = 0; a < turi.length; a++) {
-            if(turi[a].textContent == navTur2[i]) continue
-            book[a].classList.add('book-none')
+        for (let a = 0; a < book.length; a++) {
+            if(navTur2[i].textContent.toLocaleLowerCase() == asosiyTur[a].textContent.toLocaleLowerCase()) {
+                book[a].classList.add('book-none')
+                continue
+            }
+            book[a].classList.remove('book-none')
         }
 		for(let b = 0; b < navTur.length; b++){
 			if(b == i) {
@@ -393,7 +416,6 @@ for (let i = 0; i < navTur.length; i++) {
 			}
 			navTur2[b].classList.remove('noHover')
 			navTur2[b].classList.remove('activ')
-			navTur2[b].classList.remove('none')	
 		}
 	}
 }

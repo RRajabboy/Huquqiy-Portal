@@ -2339,7 +2339,7 @@ body {
 					.down {
 						width: 100%;
 						height: 100%;
-						background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+						background: linear-gradient(transparent, rgba(0, 0, 0, 0.5) 80%);
 						position: relative;
 						display: flex;
 						justify-content: end;
@@ -3337,8 +3337,8 @@ body {
 					flex-wrap: wrap;
 					align-items: flex-start;
 					display: none;
-					.book.book-none {
-						display: none;
+					.box.book-none {
+						display: inline-block;
 					}
 					.box {
 						width: 32%;
@@ -3346,6 +3346,7 @@ body {
 						background: #ffffff;
 						border: 1px solid rgba(0, 0, 0, 0.1);
 						margin-bottom: 30px;
+						display: none;
 						.img {
 							width: 100%;
 							overflow: hidden;
@@ -3389,6 +3390,7 @@ body {
 					font-size: calc(.5vw + 9px);
 					transition: .1s;
 					cursor: pointer;
+					text-transform: capitalize;
 				}
 				span.activ {
 					color: white;
@@ -3402,6 +3404,7 @@ body {
 					background-color: var(--borderClr);
 					color: black;
 				}
+				
 			}
 		}
 	}
