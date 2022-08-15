@@ -3333,7 +3333,6 @@ body {
 				.books {
 					display: flex;
 					flex-direction: row;
-					justify-content: space-between;
 					flex-wrap: wrap;
 					align-items: flex-start;
 					display: none;
@@ -3341,12 +3340,13 @@ body {
 						display: inline-block;
 					}
 					.box {
-						width: 32%;
+						width: 31%;
 						border-radius: 15px;
 						background: #ffffff;
 						border: 1px solid rgba(0, 0, 0, 0.1);
 						margin-bottom: 30px;
 						display: none;
+						margin-left: 2%;
 						.img {
 							width: 100%;
 							overflow: hidden;
@@ -3405,6 +3405,27 @@ body {
 					color: black;
 				}
 				
+			}
+		}
+	}
+}
+
+
+
+///////////////////////////////////// Videolar ////////////////////////////////////////////////////
+
+.videoMenu {
+	.container {
+		.flex {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			.box {
+				width: 24.25%;
+				iframe {
+					width: 100%;
+					height: auto;
+				}
 			}
 		}
 	}
