@@ -76,7 +76,7 @@
 		</div>
 	</div>
 	<div class="page-name">
-		<div class="container">
+		<div class="container" style="background: rgba(241, 108, 105, 0.1);">
 			<div class="mini-container">
 				<div class="left">
 					<h2>Videoroliklar</h2>
@@ -180,6 +180,15 @@
 				</div>
 
 			</div>
+			<div class="banners-navigation">
+				<div class="container5">
+					<i id="leftBtn2" class="fa-solid fa-angle-left"></i>
+					<div class="numbers" id="numbers">
+						
+					</div>
+					<i id="rightBtn2" class="fa-solid fa-angle-right"></i>
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -223,6 +232,50 @@
 		}
 
 		marginRight(video, 3, 4)
+
+
+
+let navTur2 = []
+for (let i = 0; i < navTur.length; i++) {
+    navTur2.push(document.createElement('span'))
+    document.getElementById('rightNavigation').appendChild(navTur2[i])
+    navTur2[i].textContent = navTur[i]
+    navTur2[0].classList.add('activ')
+    navTur2[0].classList.add('activ')
+    navTur2[0].classList.add('noHover')
+    for (let w = 0; w < book.length; w++) {
+        book[w].classList.add('book-none')
+    }
+    navTur2[0].onclick = () => {
+        for (let w = 0; w < book.length; w++) {
+            book[w].classList.add('book-none')
+            navTur2[0].classList.add('activ')
+            navTur2[0].classList.add('noHover')
+            if(w != 0 && w < navTur2.length){
+                navTur2[w].classList.remove('activ')
+                navTur2[w].classList.remove ('noHover')
+            }
+        }
+    }
+    navTur2[i].onclick = () => {
+		navTur2[i].classList.add('activ')
+        for (let a = 0; a < book.length; a++) {
+            if(navTur2[i].textContent.toLocaleLowerCase() == asosiyTur[a].textContent.toLocaleLowerCase()) {
+                book[a].classList.add('book-none')
+                continue
+            }
+            book[a].classList.remove('book-none')
+        }
+		for(let b = 0; b < navTur.length; b++){
+			if(b == i) {
+				navTur2[i].classList.add('noHover')
+				continue;	
+			}
+			navTur2[b].classList.remove('noHover')
+			navTur2[b].classList.remove('activ')
+		}
+	}
+}
 	</script>
 	<script src="../script.js"></script>
 </body>
