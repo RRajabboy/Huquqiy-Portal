@@ -79,8 +79,8 @@
 		<div class="container">
 			<div class="mini-container">
 				<div class="left">
-					<h2>Bepul huquqiy maslahat</h2>
-					<p><a href="../index.html">Bosh sahifa</a><span>/</span><a>Bepul huquqiy maslahat</a></p>
+					<h2>Videoroliklar</h2>
+					<p><a href="../index.html">Bosh sahifa</a><span>/</span><a>Videoroliklar</a></p>
 				</div>
 				<div class="right">
 					<img src="./img/maslahat.svg" alt="">
@@ -98,7 +98,7 @@
 				</div>
 				<div class="box">
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/G2IGSS48UNI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					<p>O’zbekiston Respublikasi Adliya Vazirligi</p>
+					<p>9-may xotira va qadrlash kuniga bag'ishlangan Adliya vazirligining videoroligi</p>
 				</div>
 				<div class="box">
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/G2IGSS48UNI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -215,6 +215,14 @@
 	</div>
 	<script>
 		let video = document.querySelectorAll('.videoMenu .container .flex .box')
+		console.log(video.length);
+		function marginRight(array, startMargin, masofa) {
+			for (let i = startMargin; i < array.length; i = i + masofa) {
+				array[i].classList.add('margin')
+			}
+		}
+
+		marginRight(video, 3, 4)
 	</script>
 	<script src="../script.js"></script>
 </body>
