@@ -217,13 +217,14 @@
 					<p><i class="fa-solid fa-location-dot"></i>O'zbekiston Respublikasi, 100047, Toshkent sh., Sayilgoh ko'chasi, 5</p>
 				</div>
 				<div class="main-logo">
-					<p>Designed by <img src="./img/NAPA.svg" alt=""></p>
+					<p>Designed by <img src="../img/NAPA.svg" alt=""></p>
 				</div>
 			</div>
 		</div>
 	</div>
 	<script>
 		let video = document.querySelectorAll('.videoMenu .container .flex .box')
+		let paren = document.querySelectorAll('.videoMenu .container .flex')
 		console.log(video.length);
 		function marginRight(array, startMargin, masofa) {
 			for (let i = startMargin; i < array.length; i = i + masofa) {
@@ -233,46 +234,51 @@
 
 		marginRight(video, 3, 4)
 
-
+let guruh = []
+let startLimit = 15
+let limit = 15
+let nth = 0;
+for (let i = 0; i < video.length; i++) {
+    if(limit == i) {
+        guruh.push(document.createElement('div'))
+        guruh[nth].classList.add('videos')
+        for (let a = 0; a <= limit; a++) {
+            guruh[nth].appendChild(video[a])
+            video[a].classList.add('box')
+        }
+        paren[0].appendChild(guruh[nth])
+        limit = limit + 16
+        nth++
+    }
+}
+if(video.length % (startLimit + 1) != 0) {
+        guruh.push(document.createElement('div'))
+        guruh[nth].classList.add('videos')
+        aLength = (video.length % (startLimit + 1)) + startLimit
+        for (let a = startLimit+1; a <= aLength; a++) {
+            guruh[nth].appendChild(video[a])
+            video[a].classList.add('box')
+        }
+        paren[0].appendChild(guruh[nth])
+        
+    }
 
 let navTur2 = []
-for (let i = 0; i < navTur.length; i++) {
+for (let i = 0; i < guruh.length; i++) {
     navTur2.push(document.createElement('span'))
-    document.getElementById('rightNavigation').appendChild(navTur2[i])
-    navTur2[i].textContent = navTur[i]
-    navTur2[0].classList.add('activ')
-    navTur2[0].classList.add('activ')
-    navTur2[0].classList.add('noHover')
-    for (let w = 0; w < book.length; w++) {
-        book[w].classList.add('book-none')
-    }
-    navTur2[0].onclick = () => {
-        for (let w = 0; w < book.length; w++) {
-            book[w].classList.add('book-none')
-            navTur2[0].classList.add('activ')
-            navTur2[0].classList.add('noHover')
-            if(w != 0 && w < navTur2.length){
-                navTur2[w].classList.remove('activ')
-                navTur2[w].classList.remove ('noHover')
-            }
-        }
-    }
+    document.getElementById('numbers').appendChild(navTur2[i])
+    navTur2[i].textContent = i + 1
+    navTur2[0].classList.add('son')
+	guruh[0].classList.add('videos-none')
     navTur2[i].onclick = () => {
-		navTur2[i].classList.add('activ')
-        for (let a = 0; a < book.length; a++) {
-            if(navTur2[i].textContent.toLocaleLowerCase() == asosiyTur[a].textContent.toLocaleLowerCase()) {
-                book[a].classList.add('book-none')
-                continue
-            }
-            book[a].classList.remove('book-none')
-        }
-		for(let b = 0; b < navTur.length; b++){
+		navTur2[i].classList.add('son')
+		guruh[i].classList.add('videos-none')
+		for(let b = 0; b < video.length; b++){
 			if(b == i) {
-				navTur2[i].classList.add('noHover')
 				continue;	
 			}
-			navTur2[b].classList.remove('noHover')
-			navTur2[b].classList.remove('activ')
+			guruh[b].classList.remove('videos-none')
+			navTur2[b].classList.remove('son')
 		}
 	}
 }

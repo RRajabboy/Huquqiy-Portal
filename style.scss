@@ -2670,7 +2670,8 @@ body {
 					font-size: calc(.5vw + 10px);
 				}
 				a {
-					font-size: calc(.5vw + 10px);
+					font-size: calc(.3vw + 14px);
+					width: 60%;
 				}
 			}
 		}
@@ -3172,7 +3173,8 @@ body {
 	}
 }
 
-.ramz {
+.ramz,
+.Yangilik {
 	.container {
 		display: flex;
 		justify-content: space-between;
@@ -3417,31 +3419,170 @@ body {
 .videoMenu {
 	.container {
 		.flex {
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-			.box {
-				width: 23.5%;
-				margin-right: 2%;
-				margin-bottom: 20px;
-				iframe {
-					width: 100%;
-					height: 200px;
-					border-radius: var(--radius);
-
+			.videos {
+				&.videos-none {
+					display: flex;
 				}
-				p {
-					overflow: hidden;
-					text-overflow: ellipsis;
-					display: -webkit-box;
-					-webkit-line-clamp: 2;
-					-webkit-box-orient: vertical;
-					font-size: 19px;
-					margin: 8px 0;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				display: none;
+				.box {
+					width: 23.5%;
+					margin-right: 2%;
+					margin-bottom: 20px;
+					iframe {
+						width: 100%;
+						height: 200px;
+						border-radius: var(--radius);
+	
+					}
+					p {
+						overflow: hidden;
+						text-overflow: ellipsis;
+						display: -webkit-box;
+						-webkit-line-clamp: 2;
+						-webkit-box-orient: vertical;
+						font-size: 19px;
+						margin: 8px 0;
+					}
+				}
+				.box.margin {
+					margin-right: 0;
 				}
 			}
-			.box.margin {
-				margin-right: 0;
+		}
+	}
+}
+
+
+//////////////////////////////// Yangilik /////////////////////////////////
+
+.Yangilik {
+	.container {
+		display: block;
+		.flex {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			> .right {
+				width: 32%;
+				background: white;
+				border: 1px solid var(--borderClr);
+				border-radius: var(--radius);
+				overflow: hidden;
+				padding: 14px;
+				> h2 {
+					padding: 0 4px;
+					margin-bottom: 10px;
+					font-size: 22px;
+				}
+				.box {
+					margin-right: 5px;
+					width: 100%;
+					background: #ffffff;
+					display: flex;
+					align-items: center;
+					padding: 8px 0;
+					.images {
+						width: 45%;
+						height: 100px;
+						overflow: hidden;
+						border-radius: var(--radius);
+						background: var(--img) no-repeat center center / cover;
+					}
+					.right {
+						width: 55%;
+						height: 100%;
+						display: flex;
+						flex-direction: column;
+						justify-content: space-around;
+						padding: 5px 0;
+						padding-left: 20px;
+						p {
+							font-size: 16px;
+							font-weight: 600;
+							margin-bottom: 12px;
+						}
+						.left {
+							span {
+								font-size: 14px;
+								font-weight: 400;
+								opacity: .8;
+								margin-right: 10px;
+								i {
+									margin-right: 5px;
+								}
+							}
+						}
+					}
+				}
+			}
+			.left {
+				width: 65%;
+				.yangil {
+					display: none;
+					&.news-none {
+						display: inline-block;
+					}
+					.box {
+						margin-right: 5px;
+						width: 100%;
+						background: #ffffff;
+						border-radius: var(--radius);
+						display: flex;
+						align-items: center;
+						padding: 20px;
+						margin-bottom: 30px;
+						border: 1px solid var(--borderClr);
+						.images {
+							width: 45%;
+							height: 220px;
+							border-radius: var(--radius);
+							background: var(--img) no-repeat center center / cover;
+						}
+						.right {
+							width: 55%;
+							height: 100%;
+							display: flex;
+							flex-direction: column;
+							justify-content: space-around;
+							padding: 5px 0;
+							padding-left: 20px;
+							h3 {
+								font-size: 25px;
+								font-weight: 600;
+								margin-bottom: 12px;
+							}
+							p {
+								font-size: 20px;
+								opacity: .9;
+								overflow: hidden;
+								text-overflow: ellipsis;
+								display: -webkit-box;
+								-webkit-line-clamp: 4;
+								-webkit-box-orient: vertical;
+							}
+							> span {
+								color: var(--clr);
+								font-size: 20px;
+								margin-bottom: 12px;
+								text-align: end;
+							}
+							.left {
+								span {
+									font-size: 18px;
+									font-weight: 400;
+									opacity: .8;
+									margin-right: 10px;
+									i {
+										margin-right: 8px;
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}
