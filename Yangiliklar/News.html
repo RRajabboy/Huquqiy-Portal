@@ -76,14 +76,15 @@
 		</div>
 	</div>
 	<div class="page-name">
-		<div class="container" style="background-color: rgba(235, 243, 250, 1)">
+		<div class="container" style="background: rgba(246, 143, 121, 0.1);
+        ">
 			<div class="mini-container">
 				<div class="left">
 					<h2>Bog’cha tarbiyalanuvchilari uchun</h1>
 					<p><a href="../index.html">Bosh sahifa</a><span>/</span><a>Onlayn sinov</a></p>
 				</div>
 				<div class="right">
-					<img src="./img/Books.svg" alt="">
+					<img src="./img/newspaper.svg" alt="">
 				</div>
 			</div>
 		</div>
@@ -92,7 +93,7 @@
     <div class="Yangilik">
         <div class="container">
             <div class="flex">
-                <div class="left">
+                <div class="left" id="orginalNews">
                     <a href="#" class="box">
                         <div class="images" style="--img: url(./Onlayn\ Sinov/img/gerb.svg)"></div>
                         <div class="right">
@@ -365,8 +366,12 @@ for (let i = 0; i < guruh.length; i++) {
 	}
 }
 
+let orginalNews = document.getElementById('orginalNews')
+const cloneNews = orginalNews.cloneNode(true)
+
 for (let i = 0; i < yangilik.length; i++) {
-    document.getElementById('newsNav')
+    document.getElementById('newsNav').appendChild(cloneNews)
+    
 }
 
 	</script>
