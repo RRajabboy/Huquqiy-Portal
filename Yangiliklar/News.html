@@ -239,8 +239,11 @@
                     </a>
     
                 </div>
-                <div class="right" id="newsNav">
+                <div class="right">
                     <h2>Ko'p ko'rilgan yangilikllar</h2>
+                    <div class="asd" id="newsNav">
+                        
+                    </div>
                 </div>
             </div>
             <div class="banners-navigation">
@@ -376,7 +379,7 @@ for (let i = 0; i< viewNum.length; i++) {
     viewNumber.push(Number(viewNum[i].textContent))
 }
 
-viewNumber.reverse()
+viewNumber.sort()
 console.log(viewNumber);
 
 console.log(cloneNews.children);

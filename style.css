@@ -171,14 +171,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: calc(0.6vw + 8px);
+  font-size: 18px;
   font-weight: 600;
   transition: 0.2s;
   height: 100%;
   padding: 10px 0;
 }
 .bosh .navbar2 .container .drop-dawn > a i {
-  font-size: calc(0.7vw + 6px);
+  font-size: 18px;
   transition: 0.3s;
   margin-left: 5px;
   transition: 0.2s;
@@ -229,7 +229,7 @@ body {
 .bosh .navbar2 .container .drop-dawn {
   font-weight: 600;
   color: black;
-  font-size: calc(0.6vw + 8px);
+  font-size: 18px;
   transition: 0.2s;
   transform: scale(1);
   border-bottom: 3px solid transparent;
@@ -1685,13 +1685,13 @@ body {
   align-items: center;
 }
 .page-name .container .mini-container .left h2 {
-  font-size: calc(0.6vw + 14px);
+  font-size: 24px;
   margin-bottom: 30px;
   font-weight: 600;
 }
 .page-name .container .mini-container .left p {
-  font-size: calc(0.3vw + 10px);
-  opacity: 0.9;
+  font-size: 20px;
+  opacity: 0.8;
 }
 .page-name .container .mini-container .left p a {
   cursor: pointer;
@@ -2618,6 +2618,43 @@ body {
 }
 .natariuslar .container .banners .container .flex .box .time a i {
   margin-top: 0;
+}
+
+.document {
+  padding: 50px 0;
+}
+.document .container .flex {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.document .container .flex .box {
+  background: white;
+  width: 19%;
+  max-width: 300px;
+  border: 1px solid var(--borderClr);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  cursor: pointer;
+}
+.document .container .flex .box img {
+  width: 20%;
+  transform: translateY(-50%);
+}
+.document .container .flex .box p {
+  width: 80%;
+  height: 50%;
+  font-size: 20px;
+  text-align: center;
+  margin-top: -7%;
+  margin-bottom: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sinov .container {
