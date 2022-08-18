@@ -32,7 +32,7 @@ body {
   width: 100%;
 }
 .bosh .navbar .container {
-  padding: 30px 0;
+  padding: 25px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,11 +43,12 @@ body {
   width: 300px;
 }
 .bosh .navbar .container .logo img {
-  width: 70px;
+  width: 64px;
   margin-right: 10px;
 }
 .bosh .navbar .container .logo p {
-  font-weight: 700;
+  font-weight: 600;
+  line-height: 1.5;
 }
 .bosh .navbar .container .search {
   width: 38%;
@@ -59,14 +60,15 @@ body {
   border: none;
   background: #efefef;
   font-size: 18px;
-  padding: 13px 22px;
-  border-radius: 25px;
+  padding: 15px 22px;
+  border-radius: 50px;
 }
 .bosh .navbar .container .search i {
-  margin-left: -36px;
+  margin-left: -40px;
+  font-size: 18px;
 }
 .bosh .navbar .container .drop-dawn {
-  margin: 0 10px;
+  padding: 10px 12px;
 }
 .bosh .navbar .container .drop-dawn span {
   width: 60px;
@@ -105,6 +107,14 @@ body {
   font-size: 18px;
   transition: 0.1s;
 }
+.bosh .navbar .container .drop-dawn .drop a .img {
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+}
+.bosh .navbar .container .drop-dawn .drop a .img img {
+  height: 100%;
+}
 .bosh .navbar .container .drop-dawn .drop a:first-child {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -121,7 +131,7 @@ body {
   transform: rotate(-180deg);
 }
 .bosh .navbar .container .imkon {
-  padding: 0 10px;
+  padding: 10px 12px;
   display: flex;
   align-items: center;
 }
@@ -1012,24 +1022,33 @@ body {
     max-width: 1550px;
     margin: 0 3%;
   }
-  .section {
+  .bosh .navbar2 .container .drop-dawn {
+    font-size: calc(0.72vw + 7px);
+  }
+  .bosh .navbar2 .container .drop-dawn > a {
+    font-size: calc(0.72vw + 7px);
+  }
+  .bosh .section {
     padding: 0;
   }
-  .section .container .mini-container {
+  .bosh .section .container {
+    border-radius: calc(1.5vw + 8px);
+  }
+  .bosh .section .container .mini-container {
     padding: 2% 0;
   }
-  .section .container .mini-container h1 {
+  .bosh .section .container .mini-container h1 {
     font-size: 50px;
   }
-  .section .container .mini-container p {
+  .bosh .section .container .mini-container p {
     font-size: 20px;
     width: 55%;
   }
-  .section .container .mini-container .search input {
+  .bosh .section .container .mini-container .search input {
     padding: 14px 18px;
     font-size: 16px;
   }
-  .section .container .mini-container .links {
+  .bosh .section .container .mini-container .links {
     display: none;
   }
   .news .container .yangilik .swiper-pagination {
@@ -1288,26 +1307,27 @@ body {
     width: 100%;
     display: block;
     position: absolute;
-    top: 30px;
+    top: 3vh;
     right: -88%;
   }
   .bosh .navbar2 .container {
     flex-direction: column;
     align-items: flex-start;
-    padding: 80px 30px;
-  }
-  .bosh .navbar2 .container > * {
-    margin-bottom: 15px;
-  }
-  .bosh .navbar2 .container .drop-dawn:nth-child(1),
-.bosh .navbar2 .container .drop-dawn:nth-child(3),
-.bosh .navbar2 .container .drop-dawn:nth-child(5) {
-    margin-bottom: 5px;
+    padding: calc(7vh + 25px) 30px;
   }
   .bosh .navbar2 .container .drop-dawn {
-    padding-bottom: 0;
+    font-size: calc(0.2vw + 14px);
+    padding: 2vh 0;
+  }
+  .bosh .navbar2 .container .drop-dawn > a {
+    padding: 0;
+    font-size: calc(0.2vw + 14px);
+  }
+  .bosh .navbar2 .container .drop-dawn a i {
+    display: none;
   }
   .bosh .navbar2 .container .drop-dawn .drop {
+    display: none;
     position: relative;
     height: 0;
     width: 100%;
@@ -1319,10 +1339,6 @@ body {
   }
   .bosh .navbar2 .container .drop-dawn .drop a:hover {
     font-weight: 500;
-  }
-  .bosh .navbar2 .container .drop-dawn:hover .drop {
-    transform: rotateX(0deg);
-    height: auto;
   }
   .bosh .navbar2 .container .br {
     transform: rotate(0);
@@ -3184,6 +3200,54 @@ body {
   justify-content: space-between;
   align-items: flex-start;
 }
+.Yangilik .container .flex .news-new > * {
+  margin-bottom: 30px;
+}
+.Yangilik .container .flex .news-new .theme {
+  display: flex;
+  flex-direction: column;
+}
+.Yangilik .container .flex .news-new .theme h1 {
+  font-weight: 600;
+  font-size: 24px;
+}
+.Yangilik .container .flex .news-new .theme .spanlar {
+  margin-top: 20px;
+  opacity: 0.6;
+}
+.Yangilik .container .flex .news-new .theme .spanlar span:first-child {
+  margin-right: 20px;
+}
+.Yangilik .container .flex .news-new .theme .spanlar span i {
+  margin-right: 5px;
+}
+.Yangilik .container .flex .news-new img {
+  width: 100%;
+}
+.Yangilik .container .flex .news-new .txt p {
+  margin-bottom: 20px;
+}
+.Yangilik .container .flex .news-new .links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.Yangilik .container .flex .news-new .links a {
+  padding: 3px 20px 5px 20px;
+  border-radius: 20px;
+  border: 1px solid var(--clr);
+  font-size: 20px;
+  color: var(--clr);
+  margin-right: 10px;
+  transition: 0.15s;
+  margin-bottom: 10px;
+}
+.Yangilik .container .flex .news-new .links a:hover {
+  background: var(--clr);
+  border: 1px solid var(--clr);
+  color: white;
+}
 .Yangilik .container .flex .left,
 .Yangilik .container .flex > .right {
   width: 65%;
@@ -3270,7 +3334,7 @@ body {
 }
 .Yangilik .container .flex > .right > h2 {
   padding: 0 4px;
-  margin-bottom: 10px;
+  margin: 10px 0 15px 0;
   font-size: 22px;
 }
 .Yangilik .container .flex > .right .yangil {
