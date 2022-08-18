@@ -132,3 +132,19 @@ for(let y = 0; y < boxCall.length; y++) {
 // 		}
 // 	}
 // }
+
+
+////////////////////////////////////////////// News ////////////////////////////////
+
+let orginalNews = document.getElementById('orginalNews')
+console.log(orginalNews);
+const cloneNews = orginalNews.cloneNode(true)
+document.getElementById('newsNav').appendChild(cloneNews)
+
+let viewNum = document.querySelectorAll('.Yangilik .container .flex .right .box .viewNumber')
+let viewNumber = []
+for (let i = 0; i< viewNum.length; i++) {
+    viewNumber.push(Number(viewNum[i].textContent))
+}
+
+viewNumber.sort()
