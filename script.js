@@ -23,6 +23,23 @@ for(let i = 0; i < son.length; i++){
 	}
 }
 
+
+let langValue = document.getElementById('lang')
+let lang = document.querySelectorAll('.lang')
+
+for (let i = 0; i < lang.length; i++) {
+	lang[i].onclick = () => {
+		let langCopy = lang[i].cloneNode(true)
+		langValue.appendChild(langCopy)
+		for(let a = 0; a < lang.length; a++) {
+			if (i == a) {
+				langValue.appendChild(langCopy)
+			}
+			langValue.removeChild(langCopy)
+		}
+	}
+}
+
 ////////////////////////// TARGIBOT ///////////////////////////
 
 let navNum = document.querySelectorAll('.banners .container .flex')
