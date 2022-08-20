@@ -28,12 +28,12 @@ let langValue = document.getElementById('lang')
 let lang = document.querySelectorAll('.lang')
 
 for (let i = 0; i < lang.length; i++) {
+	let langCopy = lang[i].cloneNode(true)
 	lang[i].onclick = () => {
-		let langCopy = lang[i].cloneNode(true)
 		langValue.appendChild(langCopy)
 		for(let a = 0; a < lang.length; a++) {
 			if (i == a) {
-				langValue.appendChild(langCopy)
+				continue
 			}
 			langValue.removeChild(langCopy)
 		}
@@ -153,15 +153,15 @@ for(let y = 0; y < boxCall.length; y++) {
 
 ////////////////////////////////////////////// News ////////////////////////////////
 
-let orginalNews = document.getElementById('orginalNews')
-console.log(orginalNews);
-const cloneNews = orginalNews.cloneNode(true)
-document.getElementById('newsNav').appendChild(cloneNews)
+// let orginalNews = document.getElementById('orginalNews')
+// console.log(orginalNews);
+// const cloneNews = orginalNews.cloneNode(true)
+// document.getElementById('newsNav').appendChild(cloneNews)
 
-let viewNum = document.querySelectorAll('.Yangilik .container .flex .right .box .viewNumber')
-let viewNumber = []
-for (let i = 0; i< viewNum.length; i++) {
-    viewNumber.push(Number(viewNum[i].textContent))
-}
+// let viewNum = document.querySelectorAll('.Yangilik .container .flex .right .box .viewNumber')
+// let viewNumber = []
+// for (let i = 0; i< viewNum.length; i++) {
+//     viewNumber.push(Number(viewNum[i].textContent))
+// }
 
-viewNumber.sort()
+// viewNumber.sort()
