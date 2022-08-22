@@ -68,7 +68,7 @@ body {
 				}
 			}
 			.drop-dawn {
-				padding: 10px 20px 10px 12px;
+				padding: 10px 12px 10px 12px;
 				span {
 					display: flex;
 					align-items: center;
@@ -157,8 +157,11 @@ body {
 				display: flex;
 				align-items: center;
 				i {
-					margin-right: 5px;
+					margin-right: 8px;
 					font-size: 20px;
+				}
+				span {
+					font-size: 17px;
 				}
 			}
 			> i {
@@ -1056,6 +1059,19 @@ body {
 		margin: 0 3%;
 	}
 	.bosh {
+		.navbar .container {
+			.logo {
+				width: 280px;
+			}
+			.imkon {
+				i {
+					font-size: 18px;
+				}
+				span {
+					font-size: 15px;
+				}
+			}
+		}
 		.navbar2{
 			.container {
 				.drop-dawn {
@@ -1352,7 +1368,7 @@ body {
 		margin-top: calc(3vw + 15px);
 		.container {
 			.left {
-				width: 50%;
+				width: 48%;
 				.logo {
 					margin-bottom: 15px;
 				}
@@ -1369,7 +1385,7 @@ body {
 				}
 			}
 			.right {
-				width: 50%;
+				width: 48%;
 				flex-direction: column;
 				.center {
 					.tema {
@@ -1394,6 +1410,16 @@ body {
 @media (min-width: 425px) and (max-width: 768px) {
 	
 	.bosh {
+		.navbar {
+			.drop-dawn {
+				span a a {
+					span {
+						display: flex;
+						font-size: calc(1vw + 10px);
+					}
+				}
+			}
+		}
 		.section {
 			margin-top: 60px;
 			.container {
@@ -1453,6 +1479,9 @@ body {
 					}
 				}
 				.imkon {
+					i {
+						font-size: 22px;
+					}
 					span {
 						display: none;
 					}
@@ -1539,27 +1568,22 @@ body {
 		}
 	}
 }
-
-@media (min-width: 425px) and (max-width: 768px) {
-	
+@media (min-width: 900px) and (max-width: 1080px) {
 	.bosh {
 		.navbar {
 			.container {
 				.drop-dawn {
-					span a a {
-						span {
-							display: flex;
-							font-size: calc(1vw + 10px);
-						}
-					}
+					width: 15%;
+					display: flex;
+					justify-content: flex-end;
 				}
 			}
 		}
 	}
 }
 
+
 @media (min-width: 600px) and (max-width: 768px) {
-	
 	.bosh {
 		.navbar {
 			.container {
@@ -1794,11 +1818,10 @@ body {
 					}
 				}
 				.icons {
-					width: 200px;
+					width: 90%;
 					i {
-						width: 30px;
-						height: 30px;
-						font-size: 15px;
+						width: 45px;
+						height: 45px;
 					}
 				}
 				> p {
@@ -1818,6 +1841,7 @@ body {
 						font-size: 11px;
 						margin-bottom: 16px;
 						width: 80%;
+						line-height: 1.2;
 					}
 				}
 				.main-logo  {
@@ -1868,9 +1892,6 @@ body {
 			> i {
 				padding-right: 5px;
 			}
-			.drop-dawn {
-
-			}
 		}
 	}
 }
@@ -1895,18 +1916,22 @@ body {
 	.bosh {
 		.navbar {
 			.container {
-				padding: 5px 0;
 				.drop-dawn {
-					span {
+					margin-left: 10%;
+					padding: 0 4px;
+					> span {
 						width: 50px;
 						font-size: 16px;
 						i {
 							font-size: 18px;
 						}
 					}
+					.drop {
+						margin-left: -19%;
+					}
 				}
 				.search {
-					margin-top: 110px;
+					margin-top: 120px;
 					input {
 						padding: 10px 20px;
 						font-size: 15px;
@@ -1919,7 +1944,7 @@ body {
 					}
 				}
 				> i {
-					font-size: 20px;
+					font-size: 22px;
 					padding: 0 3px;
 				}
 			}
@@ -1928,7 +1953,7 @@ body {
 			width: 90%;
 		}
 		.section {
-			margin-top: 60px;
+			margin-top: 50px;
 			.container {
 				border-radius: 10px;
 				.mini-container {
@@ -2014,11 +2039,21 @@ body {
 		.navbar {
 			.container {
 				.drop-dawn {
-					span {
+					margin-left: 0;
+					> span {
 						width: 40px;
 						font-size: 15px;
 						i {
 							font-size: 15px;
+						}
+					}
+				}
+				.drop-dawn {
+					span a a {
+						padding-right: 5px;
+						.img {
+							width: 24px;
+							height: 24px;
 						}
 					}
 				}
@@ -2028,7 +2063,20 @@ body {
 					}
 				}
 				> i {
-					font-size: 18px;
+					font-size: 20px;
+				}
+			}
+		}
+	}
+	.footer {
+		.container {
+			.left {
+				.icons {
+					i {
+						width: 35px;
+						height: 35px;
+						font-size: 16px;
+					}
 				}
 			}
 		}

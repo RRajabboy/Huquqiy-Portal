@@ -68,7 +68,7 @@ body {
   font-size: 18px;
 }
 .bosh .navbar .container .drop-dawn {
-  padding: 10px 20px 10px 12px;
+  padding: 10px 12px 10px 12px;
 }
 .bosh .navbar .container .drop-dawn span {
   display: flex;
@@ -158,8 +158,11 @@ body {
   align-items: center;
 }
 .bosh .navbar .container .imkon i {
-  margin-right: 5px;
+  margin-right: 8px;
   font-size: 20px;
+}
+.bosh .navbar .container .imkon span {
+  font-size: 17px;
 }
 .bosh .navbar .container > i {
   display: none;
@@ -1044,6 +1047,15 @@ body {
     max-width: 1550px;
     margin: 0 3%;
   }
+  .bosh .navbar .container .logo {
+    width: 280px;
+  }
+  .bosh .navbar .container .imkon i {
+    font-size: 18px;
+  }
+  .bosh .navbar .container .imkon span {
+    font-size: 15px;
+  }
   .bosh .navbar2 .container .drop-dawn {
     font-size: calc(0.72vw + 7px);
   }
@@ -1247,7 +1259,7 @@ body {
     margin-top: calc(3vw + 15px);
   }
   .footer .container .left {
-    width: 50%;
+    width: 48%;
   }
   .footer .container .left .logo {
     margin-bottom: 15px;
@@ -1262,7 +1274,7 @@ body {
     margin-bottom: 10px;
   }
   .footer .container .right {
-    width: 50%;
+    width: 48%;
     flex-direction: column;
   }
   .footer .container .right .center .tema {
@@ -1279,6 +1291,10 @@ body {
   }
 }
 @media (min-width: 425px) and (max-width: 768px) {
+  .bosh .navbar .drop-dawn span a a span {
+    display: flex;
+    font-size: calc(1vw + 10px);
+  }
   .bosh .section {
     margin-top: 60px;
   }
@@ -1316,6 +1332,9 @@ body {
   }
   .bosh .navbar .container .drop-dawn span a a span {
     display: none;
+  }
+  .bosh .navbar .container .imkon i {
+    font-size: 22px;
   }
   .bosh .navbar .container .imkon span {
     display: none;
@@ -1392,10 +1411,11 @@ body {
     width: 60%;
   }
 }
-@media (min-width: 425px) and (max-width: 768px) {
-  .bosh .navbar .container .drop-dawn span a a span {
+@media (min-width: 900px) and (max-width: 1080px) {
+  .bosh .navbar .container .drop-dawn {
+    width: 15%;
     display: flex;
-    font-size: calc(1vw + 10px);
+    justify-content: flex-end;
   }
 }
 @media (min-width: 600px) and (max-width: 768px) {
@@ -1576,12 +1596,11 @@ body {
     font-size: 12px;
   }
   .footer .container .left .icons {
-    width: 200px;
+    width: 90%;
   }
   .footer .container .left .icons i {
-    width: 30px;
-    height: 30px;
-    font-size: 15px;
+    width: 45px;
+    height: 45px;
   }
   .footer .container .left > p {
     font-size: 13px;
@@ -1599,6 +1618,7 @@ body {
     font-size: 11px;
     margin-bottom: 16px;
     width: 80%;
+    line-height: 1.2;
   }
   .footer .container .right .main-logo {
     margin: 0;
@@ -1647,18 +1667,22 @@ body {
   }
 }
 @media (max-width: 425px) {
-  .bosh .navbar .container {
-    padding: 5px 0;
+  .bosh .navbar .container .drop-dawn {
+    margin-left: 10%;
+    padding: 0 4px;
   }
-  .bosh .navbar .container .drop-dawn span {
+  .bosh .navbar .container .drop-dawn > span {
     width: 50px;
     font-size: 16px;
   }
-  .bosh .navbar .container .drop-dawn span i {
+  .bosh .navbar .container .drop-dawn > span i {
     font-size: 18px;
   }
+  .bosh .navbar .container .drop-dawn .drop {
+    margin-left: -19%;
+  }
   .bosh .navbar .container .search {
-    margin-top: 110px;
+    margin-top: 120px;
   }
   .bosh .navbar .container .search input {
     padding: 10px 20px;
@@ -1671,14 +1695,14 @@ body {
     font-size: 18px;
   }
   .bosh .navbar .container > i {
-    font-size: 20px;
+    font-size: 22px;
     padding: 0 3px;
   }
   .bosh .navbar2 {
     width: 90%;
   }
   .bosh .section {
-    margin-top: 60px;
+    margin-top: 50px;
   }
   .bosh .section .container {
     border-radius: 10px;
@@ -1738,18 +1762,33 @@ body {
   .bosh .logo p {
     font-size: 8px;
   }
-  .bosh .navbar .container .drop-dawn span {
+  .bosh .navbar .container .drop-dawn {
+    margin-left: 0;
+  }
+  .bosh .navbar .container .drop-dawn > span {
     width: 40px;
     font-size: 15px;
   }
-  .bosh .navbar .container .drop-dawn span i {
+  .bosh .navbar .container .drop-dawn > span i {
     font-size: 15px;
+  }
+  .bosh .navbar .container .drop-dawn span a a {
+    padding-right: 5px;
+  }
+  .bosh .navbar .container .drop-dawn span a a .img {
+    width: 24px;
+    height: 24px;
   }
   .bosh .navbar .container .imkon i {
     font-size: 15px;
   }
   .bosh .navbar .container > i {
-    font-size: 18px;
+    font-size: 20px;
+  }
+  .footer .container .left .icons i {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
   }
 }
 .page-name {
