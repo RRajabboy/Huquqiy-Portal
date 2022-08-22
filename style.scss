@@ -27,6 +27,7 @@ body {
 
 
 
+
 .bosh {
 	height: auto;
 	.navbar {
@@ -67,44 +68,63 @@ body {
 				}
 			}
 			.drop-dawn {
-				padding: 10px 12px;
+				padding: 10px 20px 10px 12px;
 				span {
-					width: 60px;
 					display: flex;
-					justify-content: space-between;
 					align-items: center;
-					font-size: 20px;
-					font-weight: 500;
-					i {
-						font-size: 20px;
-						transition: .3s;
-					}
-					img {
-						border-radius: 50%;
-						width: 20px;
-						height: 20px;
+					> a a {
+						display: flex;
+						align-items: center;
+						padding: 4px 0;
+						padding-right: 8px;
+						font-size: 18px;
+						transition: .1s;
+						background: transparent;
+						.img {
+							width: 25px;
+							height: 25px;
+							overflow: hidden;
+							border-radius: 50%;
+							margin-right: 5px;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							img {
+								height: 100%;
+							}
+						}
+						i {
+							font-size: 20px;
+							transition: .3s;
+						}
 					}
 				}
 				.drop {
-					width: 100px;
-					margin-left: -20px;
-					background: transparent;
-					border-radius: 5px;
+					width: auto;
+					background: white;
+					border-radius: var(--radius);
+					border: 1px solid var(--borderClr);
 					overflow: hidden;
 					display: flex;
 					flex-direction: column;
 					justify-content: center;
 					align-items: center;
-					display: none;
+					margin-left: -5px;
+					transform-origin: top;
+					transform: rotateX(90deg);
+					position: absolute;
 					transition: .2s;
-					background: white;
 					z-index: 1000;
+					a.active {
+						background: #597ba31e;
+						color: var(--clr);
+					}
 					a {
 						display: flex;
 						align-items: center;
-						padding: 4px 0;
-						padding-left: 10px;
-						font-size: 18px;
+						width: 100%;
+						padding: 5px 15px;
+						font-size: 16px;
 						transition: .1s;
 						.img {
 							width: 25px;
@@ -124,15 +144,10 @@ body {
 						border-top-left-radius: 5px;
 						border-top-right-radius: 5px;
 					}
-					a:hover {
-						background: #597ba31e;
-						color: var(--clr);
-					}
 				}
 			}
 			.drop-dawn:hover .drop {
-				display: block;
-				position: absolute;
+				transform: rotateX(0deg);
 			}
 			.drop-dawn:hover span i {
 				transform: rotate(-180deg);
@@ -285,7 +300,7 @@ body {
 					margin-bottom: 18px;
 				}
 				p {
-					font-size: 22px;
+					font-size: 24px;
 					width: 40%;
 					color: rgba(255, 255, 255, 0.903);
 					font-weight: 400;
@@ -316,7 +331,7 @@ body {
 						font-weight: 300;
 						border: 1px solid white;
 						border-radius: 20px;
-						padding: 8px 18px;
+						padding: 10px 18px;
 						transition: .15s;
 						line-height: 3;
 						margin-right: 10px;
@@ -1003,12 +1018,12 @@ body {
 	.container {
 		.theme {
 			h1 {
-				font-size: calc(1.2vw + 15px);
+				font-size: 28px;
 				width: 60%;
 			}
 			a {
-				font-size: calc(.6vw + 7px);
-				padding: calc(0.3vw + 5px) calc(1vw + 8px);
+				font-size: 18px;
+				padding: 10px 25px;
 			}
 		}
 	}
@@ -1230,6 +1245,13 @@ body {
 	.bosh {
 		.navbar {
 			.container {
+				.drop-dawn {
+					span a a {
+						span {
+							display: none;
+						}
+					}
+				}
 				.imkon {
 					span {
 						display: none;
@@ -1423,6 +1445,18 @@ body {
 					display: inline-block;
 					padding-right: 20px;
 				}
+				.drop-dawn {
+					span a a {
+						span {
+							display: none;
+						}
+					}
+				}
+				.imkon {
+					span {
+						display: none;
+					}
+				}
 			}
 		}
 		.navbar2.active {
@@ -1500,6 +1534,59 @@ body {
 				.right {
 					margin: 50px;
 					width: 60%;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 425px) and (max-width: 768px) {
+	
+	.bosh {
+		.navbar {
+			.container {
+				.drop-dawn {
+					span a a {
+						span {
+							display: flex;
+							font-size: calc(1vw + 10px);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+	
+	.bosh {
+		.navbar {
+			.container {
+				.drop-dawn {
+					width: 40%;
+					display: flex;
+					justify-content: flex-end;
+					span a a {
+						span {
+							display: flex;
+							font-size: calc(1vw + 10px);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 490px) and (max-width: 600px) {
+	.bosh {
+		.navbar {
+			.container {
+				.logo {
+					p {
+						width: 70%;
+					}
 				}
 			}
 		}
@@ -1759,6 +1846,35 @@ body {
 .video2 {
 	padding: 20px 0 10px 0;
 }
+
+.bosh {
+	.navbar {
+		.container {
+			.logo {
+				img {
+					width: 55px;
+				}
+				p {
+					font-size: calc(.8vw + 8px);
+					min-width: 100px;
+				}
+			}
+			.imkon {
+				padding: calc(1vw + 1px);
+				i {
+					margin: 0;
+				}
+			}
+			> i {
+				padding-right: 5px;
+			}
+			.drop-dawn {
+
+			}
+		}
+	}
+}
+
 .problem,
 .category {
 	.container .theme {

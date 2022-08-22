@@ -23,11 +23,11 @@
 					<i class="fa-solid fa-magnifying-glass"></i>
 				</div>
 				<div class="drop-dawn">
-					<span>Uz<i class="fa-solid fa-angle-down"></i></span>
+					<span><a id="lang"></a><i class="fa-solid fa-angle-down"></i></span>
 					<div class="drop">
-						<a href="#">Uz</a>
-						<a href="#">Eng</a>
-						<a href="#">Ru</a>
+						<a href="#" class="lang"><div class="img"><img src="../img/lang-uzb.png"></div><span>Uzbekcha</span></a>
+						<a href="#" class="lang"><div class="img"><img src="../img/lang-eng.png"></div><span>English</span></a>
+						<a href="#" class="lang"><div class="img"><img src="../img/lang-rus.png"></div><span>Руский</span></a>
 					</div>
 				</div>
 				<div class="imkon">
@@ -275,34 +275,34 @@ let paren = document.querySelectorAll('.kitob .container .flex .left ')
 let guruh = []
 let startLimit = 11
 let limit = 11
-let nth = 0;
+let tr = 0;
 for (let i = 0; i < book.length; i++) {
     if(limit == i) {
         guruh.push(document.createElement('div'))
-        guruh[nth].classList.add('books')
+        guruh[tr].classList.add('books')
         for (let a = 0; a <= limit; a++) {
-            guruh[nth].appendChild(book[a])
+            guruh[tr].appendChild(book[a])
             book[a].classList.add('box')
         }
-        paren[0].appendChild(guruh[nth])
+        paren[0].appendChild(guruh[tr])
         limit = limit + 12
-        nth++
+        tr++
     }
 }
 if(book.length % (startLimit + 1) != 0) {
         guruh.push(document.createElement('div'))
-        guruh[nth].classList.add('books')
+        guruh[tr].classList.add('books')
         aLength = (book.length % (startLimit + 1)) + startLimit
         for (let a = startLimit+1; a <= aLength; a++) {
-            guruh[nth].appendChild(book[a])
+            guruh[tr].appendChild(book[a])
             book[a].classList.add('box')
         }
-        paren[0].appendChild(guruh[nth])
+        paren[0].appendChild(guruh[tr])
         
     }
 
-let leftBtn = document.getElementById('leftBtn2') 
-let rightBtn = document.getElementById('rightBtn2')
+let leftBtn2 = document.getElementById('leftBtn2') 
+let rightBtn2 = document.getElementById('rightBtn2')
 
 
 let arrNum = [];
@@ -326,7 +326,7 @@ for(let i = 0; i < guruh.length; i++) {
 			guruh[b].classList.remove('none')	
 		}
 	}
-	leftBtn.onclick = () => {
+	leftBtn2.onclick = () => {
 		chi--
 		if(chi < 0) chi = guruh.length -1
 		arrNum[chi].classList.add('son')
@@ -339,7 +339,7 @@ for(let i = 0; i < guruh.length; i++) {
 			guruh[b].classList.remove('none')	
 		}
 	}
-	rightBtn.onclick = () => {
+	rightBtn2.onclick = () => {
 		chi++
 		if(chi >= guruh.length) chi = 0
 		arrNum[chi].classList.add('son')

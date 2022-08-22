@@ -26,16 +26,26 @@ for(let i = 0; i < son.length; i++){
 
 let langValue = document.getElementById('lang')
 let lang = document.querySelectorAll('.lang')
+let langCopy = []
 
 for (let i = 0; i < lang.length; i++) {
-	let langCopy = lang[i].cloneNode(true)
+	langCopy.push(lang[i].cloneNode(true))
+	langValue.appendChild(langCopy[i])
+	langCopy[i].style.display = 'none'
+	langCopy[0].style.display = 'flex'
+	lang[0].classList.add('active')
+}
+console.log(langCopy);
+for (let i = 0; i < lang.length; i++) {
 	lang[i].onclick = () => {
-		langValue.appendChild(langCopy)
-		for(let a = 0; a < lang.length; a++) {
+		langCopy[i].style.display = 'flex'
+		lang[i].classList.add('active')
+		for(let a = 0; a <= lang.length; a++) {
 			if (i == a) {
-				continue
+				continue;
 			}
-			langValue.removeChild(langCopy)
+			langCopy[a].style.display = 'none'
+			lang[a].classList.remove('active')
 		}
 	}
 }
