@@ -323,16 +323,19 @@ body {
 .bosh .section .container .mini-container .links {
   margin-top: 30px;
   width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .bosh .section .container .mini-container .links a {
   color: white;
   font-weight: 300;
   border: 1px solid white;
   border-radius: 20px;
-  padding: 10px 18px;
   transition: 0.15s;
   line-height: 3;
-  margin-right: 10px;
 }
 .bosh .section .container .mini-container .links a:hover {
   background: var(--clr);
@@ -1295,20 +1298,6 @@ body {
     display: flex;
     font-size: calc(1vw + 10px);
   }
-  .bosh .section {
-    margin-top: 60px;
-  }
-  .bosh .section .container .mini-container h1 {
-    font-size: 5vw;
-    margin-bottom: 3%;
-  }
-  .bosh .section .container .mini-container p {
-    font-size: 2.5vw;
-    width: 55%;
-  }
-  .bosh .section .container .mini-container .search {
-    display: none;
-  }
   .curs .container .boxes {
     flex-direction: column;
     align-items: center;
@@ -1473,7 +1462,7 @@ body {
   .bosh .navbar .container .search {
     width: 90%;
     position: absolute;
-    margin-top: 150px;
+    margin-top: 140px;
     margin-left: 2%;
   }
   .bosh .navbar .container .imkon span {
@@ -1487,6 +1476,23 @@ body {
   }
   .bosh .navbar2 {
     width: 70%;
+  }
+  .bosh .section {
+    margin-top: 60px;
+  }
+  .bosh .section .container .mini-container {
+    border-radius: 25px;
+  }
+  .bosh .section .container .mini-container h1 {
+    font-size: calc(2.6vw + 12px);
+    margin-bottom: 3%;
+  }
+  .bosh .section .container .mini-container p {
+    font-size: calc(2vw + 4px);
+    width: 55%;
+  }
+  .bosh .section .container .mini-container .search {
+    display: none;
   }
   .news .container .yangilik .swiper-button-prev,
 .news .container .yangilik .swiper-button-next {
@@ -1704,16 +1710,10 @@ body {
   .bosh .section {
     margin-top: 50px;
   }
-  .bosh .section .container {
-    border-radius: 10px;
-  }
   .bosh .section .container .mini-container h1 {
-    font-size: 5vw;
     margin-bottom: 3%;
   }
   .bosh .section .container .mini-container p {
-    font-size: 2.5vw;
-    width: 55%;
     margin-bottom: 0;
   }
   .bosh .section .container .mini-container .search {
@@ -1727,6 +1727,19 @@ body {
   }
   .bosh .logo p {
     font-size: 9px;
+  }
+  .news .container .yangilik .yangilik-wrapper .box .right h2 {
+    font-size: calc(1.5vw + 15px);
+  }
+  .news .container .yangilik .yangilik-wrapper .box .right p,
+.news .container .yangilik .yangilik-wrapper .box .right a {
+    font-size: calc(1vw + 9px);
+  }
+  .news .container .yangilik .yangilik-wrapper .box .right .see .sana span,
+.news .container .yangilik .yangilik-wrapper .box .right .see .sana i,
+.news .container .yangilik .yangilik-wrapper .box .right .see .korishlar span,
+.news .container .yangilik .yangilik-wrapper .box .right .see .korishlar i {
+    font-size: calc(1vw + 10px);
   }
   .problem .container:last-child .flex:first-child,
 .problem .container:last-child .flex:nth-child(2) {
